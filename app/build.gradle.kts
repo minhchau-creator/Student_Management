@@ -33,13 +33,18 @@ android {
 }
 
 dependencies {
-
   implementation(libs.androidx.core.ktx)
   implementation(libs.androidx.appcompat)
   implementation(libs.material)
   implementation(libs.androidx.activity)
   implementation(libs.androidx.constraintlayout)
+  implementation(libs.androidx.navigation.fragment.ktx)
+  implementation(libs.androidx.navigation.ui.ktx)
   testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.junit)
   androidTestImplementation(libs.androidx.espresso.core)
+  // Loại bỏ dòng này để tránh trùng lặp
+  // implementation (androidx.fragment:fragment-ktx:1.5.5)
+  // implementation (androidx.appcompat:appcompat:1.6.0) // hoặc phiên bản tương thích
+  // implementation (androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1) // Nếu dùng ViewModel
 }
